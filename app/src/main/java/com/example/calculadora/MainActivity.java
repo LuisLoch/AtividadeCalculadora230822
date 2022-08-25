@@ -172,34 +172,39 @@ public class MainActivity extends AppCompatActivity {
     }
     public void click_add(View view){
         if(operador == 0){
-            txt.setText(txt.getText()+"+");
+            txt.setText(null);
+            //txt.setText(txt.getText()+"+");
             operador = 1;
             tipo = 1;
         }
     }
     public void click_sub(View view){
         if(operador == 0){
-            txt.setText(txt.getText()+"-");
+            txt.setText(null);
+            //txt.setText(txt.getText()+"-");
             operador = 1;
             tipo = 2;
         }
     }
     public void click_mult(View view){
         if(operador == 0){
-            txt.setText(txt.getText()+"X");
+            txt.setText(null);
+            //txt.setText(txt.getText()+"X");
             operador = 1;
             tipo = 3;
         }
     }
     public void click_div(View view){
         if(operador == 0) {
-            txt.setText(txt.getText() + "/");
+            txt.setText(null);
+            //txt.setText(txt.getText() + "/");
             operador = 1;
             tipo = 4;
         }
     }
     public void click_resultado(View view) {
-        int resultado = 0;
+        float resultado = 0;
+        String resultadoString = null;
         int n1, n2;
         n1 = Integer.parseInt(numero1);
         n2 = Integer.parseInt(numero2);
@@ -220,7 +225,8 @@ public class MainActivity extends AppCompatActivity {
             default:
                 System.out.println("Erro, operador não encontrado!");
         }
-        txt.setText(resultado);
+        resultadoString = "Resultado: "+resultado;
+        txt.setText(resultadoString);
         novaOperacao = 1;
         operador = 0;
     }
