@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     Button btn_1, btn_2, btn_3, btn_4, btn_5, btn_6, btn_7, btn_8, btn_9, btn_0, btn_add, btn_sub, btn_mult, btn_div, btn_resultado;
@@ -37,12 +38,13 @@ public class MainActivity extends AppCompatActivity {
     }
 
     int operador = 0, novaOperacao = 0, tipo = 0;
-    String numero1 = null, numero2 = null;
+    String numero1 = "", numero2 = "";
 
 
     public void click_1(View view){
         if(novaOperacao == 1) {
             txt.setText(null);
+            numero1 = numero2 = "";
             novaOperacao = 0;
         }
         if(operador==0){
@@ -56,6 +58,7 @@ public class MainActivity extends AppCompatActivity {
     public void click_2(View view){
         if(novaOperacao == 1) {
             txt.setText(null);
+            numero1 = numero2 = "";
             novaOperacao = 0;
         }
         if(operador==0){
@@ -69,6 +72,7 @@ public class MainActivity extends AppCompatActivity {
     public void click_3(View view){
         if(novaOperacao == 1) {
             txt.setText(null);
+            numero1 = numero2 = "";
             novaOperacao = 0;
         }
         if(operador==0){
@@ -82,6 +86,7 @@ public class MainActivity extends AppCompatActivity {
     public void click_4(View view){
         if(novaOperacao == 1) {
             txt.setText(null);
+            numero1 = numero2 = "";
             novaOperacao = 0;
         }
         if(operador==0){
@@ -95,6 +100,7 @@ public class MainActivity extends AppCompatActivity {
     public void click_5(View view){
         if(novaOperacao == 1) {
             txt.setText(null);
+            numero1 = numero2 = "";
             novaOperacao = 0;
         }
         if(operador==0){
@@ -108,6 +114,7 @@ public class MainActivity extends AppCompatActivity {
     public void click_6(View view){
         if(novaOperacao == 1) {
             txt.setText(null);
+            numero1 = numero2 = "";
             novaOperacao = 0;
         }
         if(operador==0){
@@ -121,6 +128,7 @@ public class MainActivity extends AppCompatActivity {
     public void click_7(View view){
         if(novaOperacao == 1) {
             txt.setText(null);
+            numero1 = numero2 = "";
             novaOperacao = 0;
         }
         if(operador==0){
@@ -134,6 +142,7 @@ public class MainActivity extends AppCompatActivity {
     public void click_8(View view){
         if(novaOperacao == 1) {
             txt.setText(null);
+            numero1 = numero2 = "";
             novaOperacao = 0;
         }
         if(operador==0){
@@ -147,6 +156,7 @@ public class MainActivity extends AppCompatActivity {
     public void click_9(View view){
         if(novaOperacao == 1) {
             txt.setText(null);
+            numero1 = numero2 = "";
             novaOperacao = 0;
         }
         if(operador==0){
@@ -160,6 +170,7 @@ public class MainActivity extends AppCompatActivity {
     public void click_0(View view){
         if(novaOperacao == 1) {
             txt.setText(null);
+            numero1 = numero2 = "";
             novaOperacao = 0;
         }
         if(operador==0){
@@ -172,32 +183,32 @@ public class MainActivity extends AppCompatActivity {
     }
     public void click_add(View view){
         if(operador == 0){
-            txt.setText(null);
-            //txt.setText(txt.getText()+"+");
+            //txt.setText(null);
+            txt.setText(txt.getText()+"+");
             operador = 1;
             tipo = 1;
         }
     }
     public void click_sub(View view){
         if(operador == 0){
-            txt.setText(null);
-            //txt.setText(txt.getText()+"-");
+            //txt.setText(null);
+            txt.setText(txt.getText()+"-");
             operador = 1;
             tipo = 2;
         }
     }
     public void click_mult(View view){
         if(operador == 0){
-            txt.setText(null);
-            //txt.setText(txt.getText()+"X");
+            //txt.setText(null);
+            txt.setText(txt.getText()+"X");
             operador = 1;
             tipo = 3;
         }
     }
     public void click_div(View view){
         if(operador == 0) {
-            txt.setText(null);
-            //txt.setText(txt.getText() + "/");
+            //txt.setText(null);
+            txt.setText(txt.getText() + "/");
             operador = 1;
             tipo = 4;
         }
@@ -205,7 +216,7 @@ public class MainActivity extends AppCompatActivity {
     public void click_resultado(View view) {
         float resultado = 0;
         String resultadoString = null;
-        int n1, n2;
+        float n1, n2;
         n1 = Integer.parseInt(numero1);
         n2 = Integer.parseInt(numero2);
 
